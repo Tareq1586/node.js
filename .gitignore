@@ -6,7 +6,9 @@
 .alcache/
 #Symbols folder
 .alpackages/
+.eslintrc.json
 #Snapshots folder
+node_modules/
 .snapshots/
 #Testing Output folder
 .output/
