@@ -1,20 +1,24 @@
 /*
  * Title: Quotes library
- * Description: Utility library for generating random quoes
- * Author: Tareq Munawar
+ * Description: Utility library for generating a list of quotes
+ * Author: Md. Tareq Munawar
  * Date: 19/10/23
+ * 
 */
 
 // Dependencies
 const fs = require('fs');
 
-// Quotes object- Module scaffoling
+// Quotes object- module scaffoling
 const quote = {};
 
 //
 quote.getAllQuotes = function getAllQuotes() {
-  const allQuotes = fs.readFileSync(`${__dirname}/quotes.txt`, 'utf-8');
-  const quotesArray = allQuotes.split();
-  console.log(quotesArray);
+  const quotesFile = fs.readFileSync(`${__dirname}/quotes.txt`, 'utf-8');
+  // n?: Matches any string that contains zero or one occurances of n
+  const quotesArray = quotesFile.split(/\r?\n/);
+  return quotesArray;
 };
-quote.getAllQuotes();
+
+// Export the library
+module.exports = quote;
