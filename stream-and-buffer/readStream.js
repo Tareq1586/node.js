@@ -1,9 +1,9 @@
 // basics of streamming: data comes as a stream of droplet
 // const fs = require('fs');
 
-// const ourReadStream = fs.createReadStream(`${__dirname}/big-data.txt`);
+// const ourReadStream = fs.createReadStream(`${__dirname}/big-data.txt`, 'utf-8');
 // ourReadStream.on('data', (chunk) => {
-//   console.log(chunk.toString());
+//   console.log(chunk);
 // });
 // console.log('Hello there');
 
@@ -18,7 +18,7 @@
 //     );
 //     res.end();
 //   } else if (req.url === '/process' && req.method === 'POST') {
-//     // we can not get the whole data completely 
+//     // we can not get the whole data completely
 //     // because the data is a readable stream
 //     // console.log(req.data);
 //     const body = [];

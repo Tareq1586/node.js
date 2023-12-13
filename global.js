@@ -6,12 +6,18 @@
 // window object is not defined in node
 // console.log(window);
 
-// How is settimeout function working in node?
+// how settimeout function work in node?
 // setTimeout(() => {
-//   console.log('Hello');
+//   console.log('Hello World!');
+// }, 1000);
+
+// setTimeout function is defined in global object
+// global.setTimeout(() => {
+//   console.log(('Hello World!'));
 // }, 1000);
 
 // global object is like the window object in node
+// global obj = window obj
 // console.log(global);
 
 // global is not the same as window object
@@ -19,9 +25,7 @@
 // console.log(global.a);
 // console.log(a);
 
-// This two variables also do not come from global object
+// This two variables not come from global object
 // let me introduce with two new variable __filename and __dirname
 // console.log(__dirname);
 // console.log(__filename);
-
-

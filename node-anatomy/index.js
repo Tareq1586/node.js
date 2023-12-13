@@ -1,9 +1,9 @@
-/* 
+/*
  * Title: Random Quote Generator Project
- * Description: 
+ * Description:
  * Author: Md. Tareq Munawar
  * Date: 19/10/23
- * 
+ *
 */
 
 // Project dependencies
@@ -19,18 +19,18 @@ app.config = {
 };
 
 // Function that generates random quotes
-app.getRandomQuote = function getRandomQuote(){
-    const quotesArray = quoteLibrary.getAllQuotes();
-    const lengthOfQuotesArray = quotesArray.length;
-    const randomNumber = mathLibrary.getRandomNumber(1, lengthOfQuotesArray);
-    const selectedQuote = quotesArray[randomNumber - 1];
-    console.log(selectedQuote);
-}
+app.getRandomQuote = function getRandomQuote() {
+  const quotesArray = quoteLibrary.getAllQuotes();
+  const lengthOfQuotesArray = quotesArray.length;
+  const randomNumber = mathLibrary.getRandomNumber(1, lengthOfQuotesArray);
+  const selectedQuote = quotesArray[randomNumber - 1];
+  console.log(selectedQuote);
+};
 
 // Indefinite loop
-app.indefiniteLoop = function indefiniteLoop(){
+app.indefiniteLoop = function indefiniteLoop() {
   setInterval(app.getRandomQuote, app.config.timeBetweenQuotes);
-}
+};
 
 //
 app.indefiniteLoop();

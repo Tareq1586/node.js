@@ -5,14 +5,14 @@ function test() {
   console.log('test');
 }
 module.exports = {
-    people,
-    alias: a,
-    test: test
-}
+  people,
+  alias: a,
+  test,
+};
 
 // console.log(require);
 
-// how the iffe works as a module wrapper ...
+// how the iffe works as a module wrapper function...
 // the whole things will be wrapped up with an iffe
 // module wrapper function
 // (function(require, module, exports = {}, __dirname, __filename, global){
@@ -31,6 +31,3 @@ module.exports = {
 //     x: x,
 // };
 // console.log(obj);
-
-
-
